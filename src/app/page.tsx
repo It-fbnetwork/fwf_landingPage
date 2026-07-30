@@ -15,6 +15,23 @@ export default function Home() {
       <HomeHeader />
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(186,230,253,0.46),transparent_30%),linear-gradient(180deg,#f8fdff_0%,#effaff_54%,#ffffff_100%)] md:min-h-screen">
         <div className="container relative z-10 mx-auto px-4 pb-12 pt-20 sm:pb-16 sm:pt-24 md:pt-32">
+          <div className="mx-auto mb-8 max-w-[280px] sm:mb-10 sm:max-w-[320px] md:mb-12 md:max-w-[360px]">
+            <div className="rounded-[28px] bg-[linear-gradient(180deg,#7dd3fc_0%,#38bdf8_100%)] p-2.5 shadow-[0_28px_70px_-30px_rgba(14,165,233,0.8)] sm:rounded-[38px] sm:p-4 md:rounded-[42px] md:p-5">
+              <div className="rounded-[22px] bg-white p-1.5 sm:rounded-[30px] sm:p-2 md:rounded-[34px] md:p-3">
+                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-[18px] bg-sky-100 sm:rounded-[24px] md:rounded-[28px]">
+                  <video
+                    src="/video/snaptik_7657116507360496914_v3.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="mx-auto mb-8 max-w-4xl text-center sm:mb-12 md:mb-16">
             <p className="mx-auto mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-sky-200 bg-white/90 px-3.5 py-2.5 text-[10px] font-bold text-sky-500 shadow-[0_20px_40px_-28px_rgba(14,165,233,0.45)] backdrop-blur-sm sm:mb-6 sm:gap-3 sm:px-6 sm:py-3 sm:text-sm md:px-8 md:py-4 md:text-base">
               <span className="hero-status-dot h-2 w-2 rounded-full bg-sky-500 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5" />
