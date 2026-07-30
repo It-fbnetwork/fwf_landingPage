@@ -46,38 +46,38 @@ export function WhyChooseSection() {
   return (
     <section
       id="services"
-      className="overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f0faff_52%,#ffffff_100%)] py-20 md:py-24"
+      className="overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f0faff_52%,#ffffff_100%)] py-12 sm:py-16 md:py-24"
     >
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-4 md:px-8 xl:grid-cols-[minmax(0,0.94fr)_460px] xl:items-start xl:gap-12">
+      <div className="mx-auto grid max-w-[1440px] gap-8 px-4 sm:gap-10 md:px-8 xl:grid-cols-[minmax(0,0.94fr)_460px] xl:items-start xl:gap-12">
         <div className="max-w-[820px]">
-          <div className="mb-8 max-w-2xl text-center lg:mb-10 lg:text-left">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-sky-300 md:text-base">
+          <div className="mb-6 max-w-2xl text-center sm:mb-8 lg:mb-10 lg:text-left">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-sky-300 sm:text-sm md:text-base">
               Khám phá
             </p>
-            <h2 className="text-2xl font-bold leading-tight text-sky-600 md:text-3xl lg:text-4xl">
+            <h2 className="text-xl font-bold leading-tight text-sky-600 sm:text-2xl md:text-3xl lg:text-4xl">
               Vì sao Senka Facial Combo phù hợp <br className="hidden lg:block" /> cho làn da cần phục hồi độ ẩm
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-5 lg:gap-y-5">
+          <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-5 lg:gap-y-5">
             {industries.map((industry) => (
               <details
                 key={industry.name}
-                className={`group rounded-[26px] bg-[linear-gradient(180deg,rgba(240,249,255,0.96),rgba(224,242,254,0.94))] p-2.5 shadow-[0_18px_45px_-30px_rgba(14,165,233,0.24)] transition-all duration-300 open:bg-[linear-gradient(180deg,rgba(224,242,254,0.98),rgba(207,250,254,0.84))] open:shadow-[0_24px_55px_-28px_rgba(14,165,233,0.3)] ${industry.layoutClass}`}
+                className={`group rounded-[22px] bg-[linear-gradient(180deg,rgba(240,249,255,0.96),rgba(224,242,254,0.94))] p-2 shadow-[0_18px_45px_-30px_rgba(14,165,233,0.24)] transition-all duration-300 open:bg-[linear-gradient(180deg,rgba(224,242,254,0.98),rgba(207,250,254,0.84))] open:shadow-[0_24px_55px_-28px_rgba(14,165,233,0.3)] sm:rounded-[26px] sm:p-2.5 ${industry.layoutClass}`}
               >
-                <summary className="flex min-h-[164px] cursor-pointer list-none flex-col justify-between overflow-visible rounded-[22px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(240,249,255,0.55))] p-5 marker:hidden">
-                  <div className="flex items-start justify-between gap-4 overflow-visible">
-                    <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-visible rounded-[18px] bg-[linear-gradient(180deg,#38bdf8_0%,#0ea5e9_100%)] text-white shadow-[0_16px_35px_-20px_rgba(14,165,233,0.8)]">
-                      <div className="absolute inset-0 rounded-[18px] bg-white/10" />
-                      <div className="relative z-10 flex h-8 w-8 items-center justify-center">
-                        <industry.icon className="h-8 w-8" strokeWidth={2} />
+                <summary className="flex min-h-[120px] cursor-pointer list-none flex-col justify-between overflow-visible rounded-[18px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(240,249,255,0.55))] p-4 marker:hidden sm:min-h-[164px] sm:rounded-[22px] sm:p-5">
+                  <div className="flex items-start justify-between gap-3 overflow-visible sm:gap-4">
+                    <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-visible rounded-[14px] bg-[linear-gradient(180deg,#38bdf8_0%,#0ea5e9_100%)] text-white shadow-[0_16px_35px_-20px_rgba(14,165,233,0.8)] sm:h-16 sm:w-16 sm:rounded-[18px]">
+                      <div className="absolute inset-0 rounded-[14px] bg-white/10 sm:rounded-[18px]" />
+                      <div className="relative z-10 flex h-6 w-6 items-center justify-center sm:h-8 sm:w-8">
+                        <industry.icon className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={2} />
                       </div>
                     </div>
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-sky-200 bg-white/75 text-sky-400 transition-transform duration-300 group-open:rotate-180">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sky-200 bg-white/75 text-sky-400 transition-transform duration-300 group-open:rotate-180 sm:h-9 sm:w-9">
                       <ChevronDown className="h-4 w-4" />
                     </div>
                   </div>
-                  <h3 className="max-w-[18ch] text-lg font-bold leading-tight text-sky-950 md:text-[1.35rem]">
+                  <h3 className="mt-3 max-w-[18ch] text-base font-bold leading-tight text-sky-950 sm:mt-0 sm:text-lg md:text-[1.35rem]">
                     {industry.name}
                   </h3>
                 </summary>

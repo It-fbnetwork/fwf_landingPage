@@ -71,17 +71,17 @@ export const caseStudies: CaseStudy[] = [
 ]
 
 export const serviceSteps = [
-  { time: "1p", step: "Bước 1: Tẩy trang", image: "/399/1027 (2).png" },
+  { time: "1p", step: "Bước 1: Tẩy trang", image: "/Các bước/Tẩy trang.png" },
   { time: "1p", step: "Bước 2: Rửa mặt", image: "/399/Rửa mặt.png" },
-  { time: "1p", step: "Bước 3: Xông mặt", image: "/399/Chiếu đèn.png" },
+  { time: "1p", step: "Bước 3: Xông mặt", image: "/Các bước/Xông mặt.png" },
   { time: "2p", step: "Bước 4: Tẩy tế bào chết", image: "/399/Tẩy tế bào chết.png" },
-  { time: "3p", step: "Bước 5: Ủ mụn", image: "/399/RF.png" },
+  { time: "3p", step: "Bước 5: Ủ mụn", image: "/Các bước/ủ mụn.png" },
   { time: "5p", step: "Bước 6: Hút mụn và bã nhờn", image: "/399/Hút mụn và bã nhờn.png" },
   { time: "10p", step: "Bước 7: Đầu máy Ultrasonic với tinh chất cấp ẩm Deep Moist 3X HA", image: "/399/Ultrasonic.png" },
   { time: "10p", step: "Bước 8: Đắp mặt nạ cấp ẩm", image: "/399/Đắp mặt nạ.png" },
-  { time: "5p", step: "Bước 9: Điện di lạnh trên mặt nạ", image: "/399/Cold handle.png" },
-  { time: "1p", step: "Bước 10: Kem dưỡng", image: "/399/RF chăm sóc mắt.png" },
-  { time: "1p", step: "Bước 11: Kem chống nắng", image: "/399/RF.png" },
+  { time: "5p", step: "Bước 9: Điện di lạnh trên mặt nạ", image: "/Các bước/Điện di lạnh.png" },
+  { time: "1p", step: "Bước 10: Kem dưỡng", image: "/Các bước/Kem dưỡng.png" },
+  { time: "1p", step: "Bước 11: Kem chống nắng", image: "/Các bước/Kem chống nắng.png" },
 ]
 
 export const faqItems = [
