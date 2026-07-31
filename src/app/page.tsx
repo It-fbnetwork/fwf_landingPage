@@ -27,17 +27,7 @@ export default function Home() {
             <p className="mb-6 text-sm leading-7 text-stone-700 sm:mb-8 sm:text-base sm:leading-8 sm:text-[18px]">
               <span className="font-semibold text-sky-500">Giá trải nghiệm lần đầu 399.000</span> kèm quà tặng Senka tại 12 chi nhánh <span className="font-semibold text-orange-500">Face Wash Fox</span>.
             </p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
-              <Button asChild size="lg" className="min-h-11 rounded-[28px] bg-sky-500 px-5 text-sm font-bold text-white hover:bg-sky-600 sm:min-h-12 sm:rounded-[32px] sm:px-8 sm:text-base">
-                <Link href="#fox-swat">
-                  Khám phá liệu trình
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild type="button" size="lg" variant="outline" className="min-h-11 rounded-[28px] border-2 border-stone-200 bg-white px-5 text-sm font-bold text-slate-800 shadow-[0_18px_35px_-24px_rgba(15,23,42,0.22)] hover:border-sky-500 hover:bg-white hover:text-sky-500 sm:min-h-12 sm:rounded-[32px] sm:px-8 sm:text-base">
-                <Link href="#booking">Đặt lịch ngay</Link>
-              </Button>
-            </div>
+            
           </div>
 
           <div className="mx-auto mb-8 max-w-[280px] sm:mb-10 sm:max-w-[320px] md:mb-12 md:max-w-[360px]">
@@ -55,7 +45,20 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            
           </div>
+
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4 mb-10">
+              <Button asChild size="lg" className="min-h-11 rounded-[28px] bg-sky-500 px-5 text-sm font-bold text-white hover:bg-sky-600 sm:min-h-12 sm:rounded-[32px] sm:px-8 sm:text-base">
+                <Link href="#fox-swat">
+                  Khám phá liệu trình
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild type="button" size="lg" variant="outline" className="min-h-11 rounded-[28px] border-2 border-stone-200 bg-white px-5 text-sm font-bold text-slate-800 shadow-[0_18px_35px_-24px_rgba(15,23,42,0.22)] hover:border-sky-500 hover:bg-white hover:text-sky-500 sm:min-h-12 sm:rounded-[32px] sm:px-8 sm:text-base">
+                <Link href="#booking">Đặt lịch ngay</Link>
+              </Button>
+            </div>
 
           <div className="mx-auto grid max-w-7xl items-center gap-6 sm:gap-10 lg:grid-cols-[minmax(340px,560px)_minmax(0,1fr)] lg:gap-16">
             <div className="relative order-2 mx-auto w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:order-1">
