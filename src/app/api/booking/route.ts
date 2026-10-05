@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   const body = {
     requestType: payload.requestType === "quote" ? "quote" : "booking",
-    source: payload.source?.trim() || "senka-facial-combo",
+    source: payload.source?.trim() || "combo-4-lumiglow-gymming-eye-revive",
     fullName: payload.fullName.trim(),
     phone: payload.phone.trim(),
     email: payload.email?.trim() ?? "",

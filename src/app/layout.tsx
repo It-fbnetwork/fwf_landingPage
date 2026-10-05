@@ -5,9 +5,9 @@ import type { Metadata } from "next"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "FWF - Senka Facial Combo",
+  title: "FWF - Combo 4",
   description:
-    "Senka Facial Combo tại Face Wash Fox: liệu trình 40 phút sạch sâu, cấp ẩm và dịu nhẹ với 11 bước chuẩn hóa, kết hợp Ultrasonic Deep Moist 3X HA. Giá trải nghiệm lần đầu chỉ 399.000 (niêm yết 749.000), tặng sữa rửa mặt Senka 50g. Phù hợp mọi loại da, kể cả da nhạy cảm; áp dụng tại 12 chi nhánh Senka Pick ở TP.HCM và Hà Nội. Đặt lịch online ngay.",
+    "Combo 4 tại Face Wash Fox: Lumiglow + Gymming + Eye-Revive, liệu trình 50 phút với 13 bước chăm sóc toàn diện cho làn da rạng rỡ. Giá niêm yết 1.079.000, giá thẻ Foxie 769.000. Đặt lịch online ngay.",
   generator: "IT Department",
 }
 

@@ -5,10 +5,10 @@ import { CheckCheck, ChevronDown, Gem, HandCoins, Store } from "lucide-react"
 import Image from "next/image"
 
 const showcaseImages = [
-  "/Senka/Liệu trình Senka-01.png",
-  "/Senka/Liệu trình Senka-02.png",
-  "/Senka/Liệu trình Senka-03.png",
-  "/Senka/Liệu trình Senka-04.png",
+  "/399/1027 (2).png",
+  "/399/RF.png",
+  "/399/Ultrasonic.png",
+  "/399/Cold handle.png",
 ]
 
 export function WhyChooseSection() {
@@ -46,16 +46,16 @@ export function WhyChooseSection() {
   return (
     <section
       id="services"
-      className="overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f0faff_52%,#ffffff_100%)] py-12 sm:py-16 md:py-24"
+      className="overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#e9fbfb_52%,#ffffff_100%)] py-12 sm:py-16 md:py-24"
     >
       <div className="mx-auto grid max-w-[1440px] gap-8 px-4 sm:gap-10 md:px-8 xl:grid-cols-[minmax(0,0.94fr)_460px] xl:items-start xl:gap-12">
         <div className="max-w-[820px]">
           <div className="mb-6 max-w-2xl text-center sm:mb-8 lg:mb-10 lg:text-left">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-sky-300 sm:text-sm md:text-base">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-[#10bcc0] sm:text-sm md:text-base">
               Khám phá
             </p>
-            <h2 className="text-xl font-bold leading-tight text-sky-600 sm:text-2xl md:text-3xl lg:text-4xl">
-              Vì sao Senka Facial Combo phù hợp <br className="hidden lg:block" /> cho làn da cần phục hồi độ ẩm
+            <h2 className="text-xl font-bold leading-tight text-[#ff7a00] sm:text-2xl md:text-3xl lg:text-4xl">
+              Vì sao Combo 4 là giải pháp toàn diện <br className="hidden lg:block" /> cho làn da rạng rỡ
             </h2>
           </div>
 
@@ -63,21 +63,21 @@ export function WhyChooseSection() {
             {industries.map((industry) => (
               <details
                 key={industry.name}
-                className={`group rounded-[22px] bg-[linear-gradient(180deg,rgba(240,249,255,0.96),rgba(224,242,254,0.94))] p-2 shadow-[0_18px_45px_-30px_rgba(14,165,233,0.24)] transition-all duration-300 open:bg-[linear-gradient(180deg,rgba(224,242,254,0.98),rgba(207,250,254,0.84))] open:shadow-[0_24px_55px_-28px_rgba(14,165,233,0.3)] sm:rounded-[26px] sm:p-2.5 ${industry.layoutClass}`}
+                className={`group rounded-[22px] bg-[linear-gradient(180deg,rgba(255,248,222,0.96),rgba(233,251,251,0.94))] p-2 shadow-[0_18px_45px_-30px_rgba(8,174,181,0.24)] transition-all duration-300 open:bg-[linear-gradient(180deg,rgba(255,248,222,0.98),rgba(211,247,247,0.84))] open:shadow-[0_24px_55px_-28px_rgba(8,174,181,0.3)] sm:rounded-[26px] sm:p-2.5 ${industry.layoutClass}`}
               >
-                <summary className="flex min-h-[120px] cursor-pointer list-none flex-col justify-between overflow-visible rounded-[18px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.75),rgba(240,249,255,0.55))] p-4 marker:hidden sm:min-h-[164px] sm:rounded-[22px] sm:p-5">
+                <summary className="flex min-h-[120px] cursor-pointer list-none flex-col justify-between overflow-visible rounded-[18px] border border-teal-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(233,251,251,0.55))] p-4 marker:hidden sm:min-h-[164px] sm:rounded-[22px] sm:p-5">
                   <div className="flex items-start justify-between gap-3 overflow-visible sm:gap-4">
-                    <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-visible rounded-[14px] bg-[linear-gradient(180deg,#38bdf8_0%,#0ea5e9_100%)] text-white shadow-[0_16px_35px_-20px_rgba(14,165,233,0.8)] sm:h-16 sm:w-16 sm:rounded-[18px]">
+                    <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-visible rounded-[14px] bg-[linear-gradient(180deg,#ff8a1d_0%,#ff6a00_100%)] text-white shadow-[0_16px_35px_-20px_rgba(255,128,0,0.8)] sm:h-16 sm:w-16 sm:rounded-[18px]">
                       <div className="absolute inset-0 rounded-[14px] bg-white/10 sm:rounded-[18px]" />
                       <div className="relative z-10 flex h-6 w-6 items-center justify-center sm:h-8 sm:w-8">
                         <industry.icon className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={2} />
                       </div>
                     </div>
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sky-200 bg-white/75 text-sky-400 transition-transform duration-300 group-open:rotate-180 sm:h-9 sm:w-9">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-teal-200 bg-white/75 text-[#10bcc0] transition-transform duration-300 group-open:rotate-180 sm:h-9 sm:w-9">
                       <ChevronDown className="h-4 w-4" />
                     </div>
                   </div>
-                  <h3 className="mt-3 max-w-[18ch] text-base font-bold leading-tight text-sky-950 sm:mt-0 sm:text-lg md:text-[1.35rem]">
+                  <h3 className="mt-3 max-w-[18ch] text-base font-bold leading-tight text-slate-950 sm:mt-0 sm:text-lg md:text-[1.35rem]">
                     {industry.name}
                   </h3>
                 </summary>
@@ -94,19 +94,19 @@ export function WhyChooseSection() {
 
         <div className="relative mx-auto w-full max-w-[460px]">
           <div className="absolute inset-x-10 top-8 h-32 rounded-full bg-[radial-gradient(circle,rgba(14,165,233,0.18),transparent_72%)] blur-3xl" />
-          <div className="relative overflow-hidden rounded-[36px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(240,249,255,0.82))] p-4 shadow-[0_35px_90px_-34px_rgba(14,165,233,0.28)] md:p-5">
+          <div className="relative overflow-hidden rounded-[36px] border border-teal-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(233,251,251,0.82))] p-4 shadow-[0_35px_90px_-34px_rgba(8,174,181,0.28)] md:p-5">
             <div className="mb-5 flex items-center justify-between">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-300">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#10bcc0]">
                   Trải nghiệm
                 </p>
-                <h3 className="mt-2 text-2xl font-extrabold leading-tight text-sky-600">
-                  Senka Facial Combo
+                <h3 className="mt-2 text-2xl font-extrabold leading-tight text-[#ff7a00]">
+                  Combo 4
                 </h3>
               </div>
             </div>
 
-            <div className="relative aspect-[2481/3508] w-full overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#e0f7ff_0%,#f0faff_100%)]">
+            <div className="relative aspect-[2481/3508] w-full overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fff8de_0%,#e9fbfb_100%)]">
               <div
                 className="flex h-full"
                 style={{
@@ -123,7 +123,7 @@ export function WhyChooseSection() {
                   >
                     <Image
                       src={image}
-                      alt={`Senka Facial Combo showcase ${index + 1}`}
+                      alt={`Combo 4 showcase ${index + 1}`}
                       fill
                       sizes="(max-width: 1280px) 92vw, 460px"
                       className="object-contain object-center"
@@ -141,28 +141,27 @@ export function WhyChooseSection() {
 
 const industries = [
   {
-    name: "Giá trải nghiệm dễ chọn",
-    description: "Giá trải nghiệm lần đầu 399.000, phù hợp để khách mới thử liệu trình làm sạch và cấp ẩm trong 40 phút.",
+    name: "Giá Foxie tối ưu",
+    description: "Giá thẻ Foxie 769.000 cho liệu trình 50 phút, giá niêm yết 1.079.000.",
     layoutClass: "lg:col-start-1 lg:row-start-1",
     icon: HandCoins,
   },
   {
-    name: "Dịu nhẹ cho nhiều loại da",
-    description: "Phù hợp da dầu, da khô, da hỗn hợp, da thường, da thiếu nước và làn da nhạy cảm cần công thức không cồn, không hương liệu, không chất tạo màu.",
+    name: "Chăm sóc toàn diện",
+    description: "Kết hợp Lumiglow, Gymming và Eye-Revive để làm sạch, hỗ trợ săn chắc, cấp ẩm, thư giãn vùng mắt và làm da rạng rỡ hơn.",
     layoutClass: "lg:col-start-2 lg:row-start-1",
     icon: Store,
   },
   {
     name: "Dễ dàng đặt lịch",
-    description: "Khách có thể chọn một trong 12 chi nhánh Senka Pick tại TP.HCM và Hà Nội ngay trên landing page.",
+    description: "Khách có thể chọn chi nhánh Face Wash Fox thuận tiện tại TP.HCM và Hà Nội ngay trên landing page.",
     layoutClass: "lg:col-start-1 lg:row-start-2",
     icon: CheckCheck,
   },
   {
     name: "Quy trình rõ ràng",
-    description: "11 bước dịch vụ chuẩn hóa, kết hợp làm sạch sâu, Ultrasonic với Deep Moist 3X HA, mặt nạ cấp ẩm và điện di lạnh.",
+    description: "13 bước dịch vụ chuẩn hóa, kết hợp Hydodermabrasion, RF & EMS, Ultrasonic, điện di lạnh, mặt nạ Elravie và ánh sáng sinh học.",
     layoutClass: "lg:col-start-2 lg:row-start-2",
     icon: Gem,
   },
 ]
-

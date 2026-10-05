@@ -40,15 +40,15 @@ export function FoxSwatSection() {
     <section id="fox-swat" className="relative z-20 bg-white py-12 sm:py-16 md:py-24">
       <div className="mx-auto w-full max-w-[1320px] px-4 md:px-8 xl:px-10">
         <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400 sm:text-sm">Quy trình 40 phút</p>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#10bcc0] sm:text-sm">Quy trình 50 phút</p>
           <h3 className="mt-3 text-xl font-extrabold leading-tight text-slate-950 sm:text-2xl md:text-3xl">
-            11 bước làm sạch và cấp ẩm dịu nhẹ
+            13 bước cho làn da rạng rỡ
           </h3>
           <p className="mt-3 text-sm font-semibold leading-6 text-stone-500 sm:mt-4 sm:text-base sm:leading-7 md:text-lg">
             Các bước được sắp xếp theo trình tự trải nghiệm tại cửa hàng,
             <span className="hidden sm:inline"> </span>
             <br className="hidden sm:block" />
-            từ làm sạch đến cấp ẩm và bảo vệ da.
+            từ làm sạch, nâng cơ, thư giãn mắt đến khóa ẩm và bảo vệ da.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export function FoxSwatSection() {
             {/* Mobile timeline line */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute bottom-8 left-5 top-8 w-px -translate-x-1/2 bg-[repeating-linear-gradient(to_bottom,rgb(125_211_252)_0_2px,transparent_2px_14px)] md:hidden"
+              className="pointer-events-none absolute bottom-8 left-5 top-8 w-px -translate-x-1/2 bg-[repeating-linear-gradient(to_bottom,rgb(255_128_0)_0_2px,transparent_2px_14px)] md:hidden"
             />
 
             {/* Desktop timeline path */}
@@ -70,7 +70,7 @@ export function FoxSwatSection() {
               <path
                 d="M72 0 C32 125 112 220 72 345 C32 470 108 570 72 690 C36 810 106 910 72 1035 C46 1128 78 1180 72 1200"
                 fill="none"
-                stroke="rgb(125 211 252)"
+                stroke="rgb(255 128 0)"
                 strokeDasharray="2 12"
                 strokeLinecap="round"
                 strokeWidth="4"
@@ -105,7 +105,7 @@ export function FoxSwatSection() {
                       <p className="font-serif text-4xl italic leading-none text-slate-950 sm:text-5xl md:text-7xl">
                         {stepNumber}
                       </p>
-                      <h4 className="mt-2 text-lg font-extrabold leading-snug text-sky-700 sm:mt-4 sm:text-2xl md:text-3xl">
+                      <h4 className="mt-2 text-lg font-extrabold leading-snug text-[#ff7a00] sm:mt-4 sm:text-2xl md:text-3xl">
                         {title}
                       </h4>
                       <p className="mt-2 whitespace-normal text-sm font-semibold leading-6 text-stone-500 sm:mt-3 sm:text-base sm:leading-7 md:whitespace-pre-line">
@@ -115,14 +115,14 @@ export function FoxSwatSection() {
 
                     <div
                       className={`absolute left-5 top-1 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-dotted bg-white text-[11px] font-black shadow-[0_16px_35px_-24px_rgba(14,165,233,0.7)] transition-all duration-700 sm:h-12 sm:w-12 sm:text-sm md:static md:col-start-2 md:mx-auto md:translate-x-0 ${
-                        isVisible ? "scale-100 border-sky-300 text-sky-600" : "scale-90 border-sky-100 text-sky-300"
+                        isVisible ? "scale-100 border-orange-300 text-orange-500" : "scale-90 border-orange-100 text-orange-300"
                       }`}
                     >
                       {item.time}
                     </div>
 
                     <div className={`${isLeft ? "md:col-start-3" : "md:col-start-1 md:row-start-1"} pl-14 sm:pl-16 md:pl-0`}>
-                      <div className="relative mx-auto aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-[22px] border border-sky-100 bg-[radial-gradient(circle_at_top,rgba(186,230,253,0.58),transparent_64%),#f0faff] shadow-[0_22px_50px_-34px_rgba(14,165,233,0.45)] sm:max-w-[260px] sm:rounded-[28px] md:max-w-[280px]">
+                      <div className="relative mx-auto aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-[22px] border border-teal-100 bg-[radial-gradient(circle_at_top,rgba(255,207,0,0.28),transparent_64%),#e9fbfb] shadow-[0_22px_50px_-34px_rgba(8,174,181,0.45)] sm:max-w-[260px] sm:rounded-[28px] md:max-w-[280px]">
                         <Image
                           src={item.image}
                           alt={title}
@@ -138,11 +138,11 @@ export function FoxSwatSection() {
             </div>
           </div>
 
-          <div className="relative z-10 mt-10 rounded-[22px] border border-sky-100 bg-sky-50/70 px-4 py-4 text-center shadow-[0_20px_55px_-38px_rgba(14,165,233,0.45)] sm:mt-16 sm:rounded-[28px] sm:px-6 sm:py-5">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-sky-400 sm:text-sm">Giá trải nghiệm lần đầu</p>
-            <p className="mt-2 text-3xl font-black text-sky-700 sm:text-4xl">399.000</p>
+          <div className="relative z-10 mt-10 rounded-[22px] border border-teal-100 bg-[#10bcc0]/10 px-4 py-4 text-center shadow-[0_20px_55px_-38px_rgba(8,174,181,0.45)] sm:mt-16 sm:rounded-[28px] sm:px-6 sm:py-5">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#10bcc0] sm:text-sm">Giá thẻ Foxie</p>
+            <p className="mt-2 text-3xl font-black text-orange-500 sm:text-4xl">769.000</p>
             <p className="mt-2 text-xs font-semibold leading-5 text-stone-500 sm:text-sm">
-              Áp dụng tại 12 chi nhánh Senka Pick, quà tặng có giới hạn số lượng.
+              Giá niêm yết 1.079.000, liệu trình 50 phút với 13 bước chăm sóc toàn diện.
             </p>
           </div>
         </div>
@@ -152,15 +152,17 @@ export function FoxSwatSection() {
 }
 
 const timelineDescriptions = [
-  "Loại bỏ lớp trang điểm, kem chống nắng \n và bụi bẩn trên bề mặt da.",
-  "Làm sạch nhẹ nhàng để da thông thoáng \n trước các bước chăm sóc tiếp theo.",
-  "Hơi ấm hỗ trợ làm mềm da \n và chuẩn bị cho bước xử lý bã nhờn.",
-  "Lấy đi tế bào chết bề mặt để da mịn \n và dễ hấp thu dưỡng chất hơn.",
-  "Làm mềm nhân mụn, \n hỗ trợ quá trình hút mụn diễn ra êm hơn.",
-  "Hỗ trợ làm sạch bã nhờn \n  và tạp chất trong vùng da cần chăm sóc.",
-  "Kết hợp đầu máy Ultrasonic với tinh chất Deep Moist 3X HA \n để tăng cường cấp ẩm.",
-  "Bổ sung độ ẩm, giúp da dịu lại \n sau các bước làm sạch chuyên sâu.",
-  "Làm mát và hỗ trợ khóa ẩm trên nền mặt nạ.",
-  "Hoàn thiện lớp dưỡng để da mềm và dễ chịu hơn.",
-  "Bảo vệ da sau liệu trình \n trước khi khách quay lại sinh hoạt trong ngày.",
+  "Loại bỏ lớp trang điểm, kem chống nắng \n và bụi bẩn trên da bằng nước tẩy trang phù hợp với loại da.",
+  "Sử dụng sữa rửa mặt dịu nhẹ vegan low pH \n để làm sạch da mặt với máy rửa mặt, \n loại bỏ bụi bẩn và dầu thừa.",
+  "Xông mặt để làm giãn nở lỗ chân lông, giúp da \n dễ dàng hấp thụ dưỡng chất và loại bỏ bụi bẩn sâu bên trong.",
+  "Bằng đầu máy công nghệ Skin scrubber, \n nhẹ nhàng lấy đi da chết mà không gây đỏ rát\n hay tổn thương.",
+  "Để giúp làm mềm nhân mụn, đẩy mụn đầu đen \n và sợi bã nhờn lên bề mặt da.",
+  "Bằng đầu máy Hydodermabrasion, sử dụng công nghệ xoáy xoay tốc độ cao đồng thời, nó được trang bị đầu silicon xoay 360 độ đã được cấp bằng sáng chế để Massage hệ bạch huyết phối hợp với đầu hút xoắn ốc loại bỏ tế bào sừng lão hóa, loại bỏ bã nhờn, loại bỏ triệt để mọi loại bụi bẩn bên trong nang lông, đẩy bụi bẩn dưới đáy lên trên và hút ngược ra ngoài.",
+  "Dùng đầu máy công nghệ Radio Frequency Lifting & EMS \n(đầu chuyên dụng giành riêng cho toàn mặt và vùng mắt)\n sử dụng sóng điện từ tần số cao để tác động đến các mô của lớp biểu bì da và sinh nhiệt. Nhờ đó các sóng RF sẽ kích thích tăng sinh các sợi collagen, các sợi collagen cũ bị đứt gãy hoặc chùng nhão sẽ được tác động săn chắc để nâng cơ giảm nếp nhăn mắt, săn chắc lại da vùng mắt và bọng mắt.",
+  "Đầu máy công nghệ Ultrasonic Handle sử dụng rung động siêu âm tần số cao giúp thư giãn lỗ chân lông và thúc đẩy thẩm thấu dưỡng chất nuôi dưỡng da từ bên trong.",
+  "Để giúp các dưỡng chất thẩm thấu sâu và cân bằng da\n   và khóa ẩm hiệu quả, se khít lỗ chân lông.",
+  "Sử dụng mặt nạ cao cấp từ Elravie để cung cấp dưỡng chất, \n cấp ẩm và phục hồi da.",
+  "Làm sáng & đều màu da, tăng sinh collagen.",
+  "Phù hợp với loại da để cung cấp độ ẩm cho da và giúp da mềm mại, mịn màng.",
+  "Kem chống nắng hoàn thiện liệu trình \n và bảo vệ da sau chăm sóc.",
 ]
