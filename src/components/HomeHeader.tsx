@@ -75,7 +75,7 @@ export function HomeHeader() {
         <div className="flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-[72px] lg:gap-4">
           <Link
             href="/"
-            className="flex h-10 w-[72px] shrink-0 items-center sm:h-11 sm:w-[80px]"
+            className="flex h-12 w-[86px] shrink-0 items-center sm:h-14 sm:w-[100px]"
             aria-label="Face Wash Fox"
             onClick={closeMenu}
           >
