@@ -15,12 +15,12 @@ export default function Home() {
       <HomeHeader />
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(210,238,230,0.45),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(190,229,232,0.22),transparent_38%),linear-gradient(180deg,#e8f5f0_0%,#f3faf7_48%,#ffffff_100%)] md:min-h-screen">
         <div className="container relative z-10 mx-auto px-4 pb-12 pt-20 sm:pb-16 sm:pt-24 md:pt-32">
-          <div className="mx-auto mb-8 max-w-4xl text-center sm:mb-12 md:mb-16">
+          <div className="mx-auto mb-8 max-w-6xl text-center [container-type:inline-size] sm:mb-12 md:mb-16">
             <p className="mx-auto mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-orange-200 bg-white/95 px-3.5 py-2.5 text-[10px] font-bold text-orange-500 shadow-[0_20px_40px_-28px_rgba(255,128,0,0.48)] backdrop-blur-sm sm:mb-6 sm:gap-3 sm:px-6 sm:py-3 sm:text-sm md:px-8 md:py-4 md:text-base">
               <span className="hero-status-dot h-2 w-2 rounded-full bg-orange-500 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5" />
               <span className="truncate">COMBO 4</span>
             </p>
-            <h1 className="mb-4 text-[1.8rem] font-black leading-tight text-[#ff7a00] sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mb-4 whitespace-nowrap text-[min(4.8cqw,3.75rem)] font-black leading-tight tracking-tight text-[#ff7a00] sm:mb-6">
               Lumiglow + Gymming + Eye-Revive
             </h1>
             <p className="mx-auto mb-6 max-w-3xl text-sm font-semibold leading-7 text-stone-700 sm:mb-8 sm:text-base sm:leading-8 md:text-[20px]">

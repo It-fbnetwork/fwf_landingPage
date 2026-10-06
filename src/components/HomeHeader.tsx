@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Menu, X } from "lucide-react"
+import { MapPin, Menu, X } from "lucide-react"
 import Image from "next/image"
 import { SectionLink as Link } from "@/components/SectionLink"
 import { usePathname } from "next/navigation"
@@ -15,7 +15,9 @@ const headerLinks = [
 ]
 
 export function HomeHeader() {
+  const [activeSection, setActiveSection] = useState("")
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === "/"
@@ -34,11 +36,22 @@ export function HomeHeader() {
   }, [pathname])
 
   useEffect(() => {
+    let previousScrollY = Math.max(0, window.scrollY)
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const currentScrollY = Math.max(0, window.scrollY)
+      setIsScrolled(currentScrollY > 50)
+
+      if (currentScrollY <= 50) {
+        setIsHeaderHidden(false)
+      } else if (Math.abs(currentScrollY - previousScrollY) < 6) {
+        return
+      } else {
+        setIsHeaderHidden(currentScrollY > previousScrollY)
+      }
+      previousScrollY = currentScrollY
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -55,13 +68,14 @@ export function HomeHeader() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full p-2 transition-all duration-300 ${isScrolled || isMenuOpen ? "border-b border-orange-100 bg-white/95 backdrop-blur-md" : "bg-transparent"}`}
+      onFocusCapture={() => setIsHeaderHidden(false)}
+      className={`fixed top-0 z-50 w-full p-2 transition-all duration-300 motion-reduce:transition-none ${isHeaderHidden && !isMenuOpen ? "-translate-y-full" : "translate-y-0"} ${isScrolled || isMenuOpen ? "border-b border-orange-100 bg-white/95 backdrop-blur-md" : "bg-transparent"}`}
     >
-      <div className="container mx-auto px-3 sm:px-4">
-        <div className="flex h-14 items-center justify-between gap-2 sm:h-16 md:h-20 md:gap-6">
+      <div className="mx-auto max-w-[1120px] px-3 sm:px-5 lg:px-6">
+        <div className="flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-[72px] lg:gap-4">
           <Link
             href="/"
-            className="flex h-10 w-[72px] shrink-0 items-center sm:h-12 sm:w-[88px] md:h-20 md:w-[144px]"
+            className="flex h-10 w-[72px] shrink-0 items-center sm:h-11 sm:w-[80px]"
             aria-label="Face Wash Fox"
             onClick={closeMenu}
           >
@@ -74,10 +88,10 @@ export function HomeHeader() {
               priority
             />
           </Link>
-          <nav className="nav-shimmer hidden items-center gap-3 rounded-full border border-orange-300/80 bg-white/90 px-4 py-3 shadow-[0_18px_40px_-28px_rgba(234,88,12,0.38)] backdrop-blur md:flex">
+          <nav className="hidden min-w-0 flex-1 items-center justify-between gap-1 rounded-full border-2 border-[#f1d3ba] bg-white/95 p-1 lg:flex">
             <Link
               href="https://menu.facewashfox.com/"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-transparent px-6 text-lg font-semibold text-slate-600 transition-all duration-300 hover:border-orange-200 hover:bg-orange-50 hover:text-orange-500"
+              className="inline-flex h-10 flex-1 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5"
             >
               Fox Menu
             </Link>
@@ -85,36 +99,39 @@ export function HomeHeader() {
               <Link
                 key={link.label}
                 href={resolveHref(link.href)}
-                className="inline-flex h-12 items-center justify-center rounded-full border border-transparent px-6 text-lg font-semibold text-slate-600 transition-all duration-300 hover:border-orange-200 hover:bg-orange-50 hover:text-orange-500"
+                onClick={() => setActiveSection(link.href)}
+                aria-current={activeSection === link.href ? "location" : undefined}
+                className={`inline-flex h-10 flex-1 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5 ${activeSection === link.href ? "bg-[#fff0da] text-[#e97828]" : ""}`}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+          <div className="flex shrink-0 items-center gap-2">
             <Button
               asChild
               variant="outline"
-              className="nav-shimmer hidden h-14 rounded-full border-orange-300 bg-white/90 px-7 text-lg font-semibold text-slate-700 shadow-[0_18px_40px_-28px_rgba(234,88,12,0.2)] hover:border-orange-300 hover:bg-orange-50 hover:text-orange-500 md:inline-flex"
+              className="hidden h-10 rounded-full border-2 border-[#f1d3ba] bg-white/95 px-5 text-base font-bold text-[#373b43] shadow-none hover:bg-[#fff0da] hover:text-[#e97828] lg:inline-flex"
             >
               <Link href="https://cuahang.facewashfox.com/" target="_blank" rel="noopener noreferrer">
+                <MapPin className="h-4 w-4" />
                 Chi Nhánh
               </Link>
             </Button>
             <Button
               asChild
-              className="nav-shimmer h-10 rounded-full border border-orange-300 bg-orange-500 px-3.5 text-sm font-semibold text-white shadow-[0_18px_40px_-28px_rgba(234,88,12,0.45)] hover:bg-orange-600 sm:h-11 sm:px-4 md:h-14 md:px-10 md:text-lg"
+              className="h-10 rounded-full border-2 border-[#ffb66b] bg-gradient-to-b from-[#ff9d24] to-[#ff8000] px-4 text-sm font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] hover:brightness-105 lg:px-5 lg:text-base"
             >
               <Link href={resolveHref("#booking")} onClick={closeMenu}>
-                <span className="md:hidden">Đặt Lịch</span>
-                <span className="hidden md:inline">Đặt Lịch Ngay</span>
+                <span className="lg:hidden">Đặt Lịch</span>
+                <span className="hidden lg:inline">Đặt Lịch Ngay</span>
               </Link>
             </Button>
             <button
               type="button"
               aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
               aria-expanded={isMenuOpen}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-orange-200 bg-white text-orange-500 shadow-sm md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-orange-200 bg-white text-orange-500 shadow-sm lg:hidden"
               onClick={() => setIsMenuOpen((open) => !open)}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -124,7 +141,7 @@ export function HomeHeader() {
       </div>
 
       {isMenuOpen ? (
-        <div className="border-t border-orange-100 bg-white px-4 py-4 md:hidden">
+        <div className="mx-3 mt-2 rounded-[24px] border-2 border-[#f1d3ba] bg-white/95 p-3 shadow-sm lg:hidden">
           <nav className="flex flex-col gap-1">
             <Link
               href="https://menu.facewashfox.com/"
