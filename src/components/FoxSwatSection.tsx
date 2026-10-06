@@ -52,7 +52,7 @@ export function FoxSwatSection() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl ">
           <div className="relative">
             {/* Mobile timeline line */}
             <div
@@ -92,13 +92,11 @@ export function FoxSwatSection() {
                       itemRefs.current[index] = element
                     }}
                     data-timeline-index={index}
-                    className={`relative grid gap-4 transition-all duration-700 ease-out sm:gap-5 md:grid-cols-[minmax(0,1fr)_96px_minmax(0,1fr)] md:items-center md:gap-6 ${
-                      isLeft ? "" : "md:[&_.timeline-copy]:col-start-3"
-                    } ${
-                      isVisible
+                    className={`relative grid gap-4 transition-all duration-700 ease-out sm:gap-5 md:grid-cols-[minmax(0,1fr)_96px_minmax(0,1fr)] md:items-center md:gap-6 ${isLeft ? "" : "md:[&_.timeline-copy]:col-start-3"
+                      } ${isVisible
                         ? "translate-y-0 opacity-100"
                         : "translate-y-8 opacity-0 md:translate-y-14"
-                    }`}
+                      }`}
                     style={{ transitionDelay: `${Math.min(index % 3, 2) * 90}ms` }}
                   >
                     <div className={`timeline-copy pl-14 sm:pl-16 md:pl-0 ${isLeft ? "md:text-right" : "md:text-left"}`}>
@@ -114,9 +112,8 @@ export function FoxSwatSection() {
                     </div>
 
                     <div
-                      className={`absolute left-5 top-1 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-dotted bg-white text-[11px] font-black shadow-[0_16px_35px_-24px_rgba(14,165,233,0.7)] transition-all duration-700 sm:h-12 sm:w-12 sm:text-sm md:static md:col-start-2 md:mx-auto md:translate-x-0 ${
-                        isVisible ? "scale-100 border-orange-300 text-orange-500" : "scale-90 border-orange-100 text-orange-300"
-                      }`}
+                      className={`absolute left-5 top-1 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-dotted bg-white text-[11px] font-black shadow-[0_16px_35px_-24px_rgba(14,165,233,0.7)] transition-all duration-700 sm:h-12 sm:w-12 sm:text-sm md:static md:col-start-2 md:mx-auto md:translate-x-0 ${isVisible ? "scale-100 border-orange-300 text-orange-500" : "scale-90 border-orange-100 text-orange-300"
+                        }`}
                     >
                       {item.time}
                     </div>
@@ -137,16 +134,22 @@ export function FoxSwatSection() {
               })}
             </div>
           </div>
-
-          <div className="relative z-10 mt-10 rounded-[22px] border border-teal-100 bg-[#10bcc0]/10 px-4 py-4 text-center shadow-[0_20px_55px_-38px_rgba(8,174,181,0.45)] sm:mt-16 sm:rounded-[28px] sm:px-6 sm:py-5">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#10bcc0] sm:text-sm">Giá thẻ Foxie</p>
-            <p className="mt-2 text-3xl font-black text-orange-500 sm:text-4xl">769.000</p>
+          <div className="relative z-10 mx-auto mt-10 w-[50%] rounded-[22px] border border-teal-100 bg-[#10bcc0]/10 px-4 py-4 text-center shadow-[0_20px_55px_-38px_rgba(8,174,181,0.45)] sm:mt-16 sm:rounded-[28px] sm:px-6 sm:py-5">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#10bcc0] sm:text-sm">
+              Ưu đãi giá trải nghiệm lần đầu
+            </p>
+            <p className="mt-2 text-3xl font-black text-orange-500 sm:text-4xl">399.000</p>
             <p className="mt-2 text-xs font-semibold leading-5 text-stone-500 sm:text-sm">
-              Giá niêm yết 1.079.000, liệu trình 50 phút với 13 bước chăm sóc toàn diện.
+              Áp dụng cho khách hàng lần đầu trải nghiệm!
             </p>
           </div>
+
         </div>
+
+
       </div>
+
+
     </section>
   )
 }

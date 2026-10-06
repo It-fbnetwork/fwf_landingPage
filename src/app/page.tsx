@@ -24,7 +24,7 @@ export default function Home() {
               Lumiglow + Gymming + Eye-Revive
             </h1>
             <p className="mx-auto mb-6 max-w-3xl text-sm font-semibold leading-7 text-stone-700 sm:mb-8 sm:text-base sm:leading-8 md:text-[20px]">
-              Giải pháp toàn diện cho làn da rạng rỡ trong <span className="font-black text-[#10bcc0]">50 phút</span>. Giá niêm yết <span className="font-black text-stone-500">1079K</span>, giá thẻ Foxie <span className="font-black text-orange-500">769K</span>.
+              Giải pháp toàn diện cho làn da rạng rỡ trong <span className="font-black text-[#10bcc0]">50 phút</span>. Giá niêm yết <span className="font-black text-stone-500">1079K</span>, giá thẻ Foxie <span className="font-black text-orange-500">399K</span>.
             </p>
             
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-[14px] border border-teal-100 bg-white/92 p-2.5 text-center shadow-[0_18px_45px_-34px_rgba(8,174,181,0.35)] sm:rounded-[20px] sm:p-4">
                   <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#10bcc0] sm:text-xs sm:tracking-[0.16em]">Giá Foxie</p>
-                  <p className="mt-1 text-xl font-black text-orange-500 sm:mt-2 sm:text-3xl">769K</p>
+                  <p className="mt-1 text-xl font-black text-orange-500 sm:mt-2 sm:text-3xl">399K</p>
                 </div>
                 <div className="rounded-[14px] border border-teal-100 bg-white/92 p-2.5 text-center shadow-[0_18px_45px_-34px_rgba(8,174,181,0.35)] sm:rounded-[20px] sm:p-4">
                   <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#10bcc0] sm:text-xs sm:tracking-[0.16em]">Số bước</p>
@@ -126,15 +126,10 @@ export default function Home() {
         <div className="relative mx-auto w-full max-w-[1800px] px-4 py-8 sm:px-6 md:px-10 md:py-10 xl:px-16">
           <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1.2fr)_360px] lg:gap-8">
             <div className="max-w-4xl">
-              <h2 className="max-w-4xl text-xl font-extrabold leading-tight md:text-3xl">
-                Combo 4 tại Face Wash Fox
+              <h2 className="max-w-4xl text-xl font-extrabold leading-tight md:text-xl">
+                Combo 4: Lumiglow + Gymming + Eye-revive <br></br>giải pháp toàn diện cho làn da rạng rỡ trong 50 phút
               </h2>
-              <p className="mt-2 max-w-2xl text-sm font-semibold leading-6 text-orange-50/95 md:text-base md:leading-7">
-                Lumiglow + Gymming + Eye-Revive: giải pháp toàn diện cho làn da rạng rỡ trong 50 phút.
-              </p>
-              <p className="mt-2 text-base font-black tracking-[0.08em] text-white md:text-lg">
-                Hotline: 0889 866 666
-              </p>
+            
             </div>
 
             <div className="flex flex-col gap-2.5 lg:items-end">
@@ -162,7 +157,7 @@ export default function Home() {
               className="w-[140px] sm:w-[160px]"
             />
             <p className="max-w-xl text-xs font-semibold leading-5 text-white/80 sm:text-sm sm:leading-6">
-              Số lượng quà tặng có hạn. Vui lòng liên hệ nhân viên để kiểm tra tình trạng quà tặng trước khi đăng ký.
+              Số lượng đăng ký trải nghiệm có hạn. Vui lòng liên hệ nhân viên để kiểm tra tình trạng quà tặng trước khi đăng ký.
             </p>
           </div>
 

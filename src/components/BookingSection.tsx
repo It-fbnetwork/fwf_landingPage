@@ -135,40 +135,38 @@ export function BookingSection() {
         <div className="mx-auto max-w-5xl text-center">
           <a
             href="tel:0889866666"
-            className="mx-auto flex min-h-12 w-full max-w-2xl items-center justify-center rounded-[14px] bg-[#10bcc0] px-4 py-3 text-center text-base font-extrabold leading-snug text-white transition-opacity hover:opacity-90 sm:min-h-14 sm:px-6 sm:text-lg md:h-16 md:px-8 md:text-[1.65rem]"
+            className="mx-auto flex min-h-12 w-full max-w-md items-center justify-center rounded-[20px] bg-[#10bcc0] px-4 py-10 text-center text-base font-extrabold leading-snug text-white transition-opacity hover:opacity-90 sm:min-h-14 sm:px-6 sm:text-lg md:h-16 md:px-8 md:text-[1.65rem]"
           >
-            Đặt lịch Combo 4 giá Foxie 769.000
+            Đặt lịch Combo 4 giá Foxie 399.000
           </a>
           <h2 className="mb-3 pt-4 text-lg font-bold leading-snug text-black sm:mb-4 sm:pt-5 sm:text-xl md:text-3xl">
-            Lumiglow + Gymming + Eye-Revive đã sẵn sàng tại Face Wash Fox
+            Lumiglow + Gymming + Eye-Revive <br></br> đã sẵn sàng tại Face Wash Fox
           </h2>
           <p className="mb-6 text-sm leading-6 text-muted-foreground sm:mb-8 sm:leading-7 md:text-[16px]">
             Để lại thông tin và chọn chi nhánh thuận tiện nhất. FWF sẽ liên hệ xác nhận lịch trước khi bạn đến cửa hàng.
           </p>
-          <form className="mx-auto mt-6 max-w-2xl space-y-4 sm:mt-8 sm:space-y-6 md:mt-10" onSubmit={handleSubmitBooking}>
-            <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
-              <div>
-                <input
-                  id="booking-name"
-                  type="text"
-                  value={fullName}
-                  onChange={(event) => setFullName(event.target.value)}
-                  placeholder="Nhập họ và tên"
-                  required
-                  className="h-12 w-full rounded-[14px] border border-teal-200 bg-white px-4 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 sm:px-5 md:text-[1.15rem]"
-                />
-              </div>
-              <div>
-                <input
-                  id="booking-phone"
-                  type="tel"
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
-                  placeholder="Nhập số điện thoại"
-                  required
-                  className="h-12 w-full rounded-[14px] border border-teal-200 bg-white px-4 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 sm:px-5 md:text-[1.15rem]"
-                />
-              </div>
+          <form className="mx-auto mt-6 max-w-md space-y-4 sm:mt-8 md:mt-10" onSubmit={handleSubmitBooking}>
+            <div>
+              <input
+                id="booking-name"
+                type="text"
+                value={fullName}
+                onChange={(event) => setFullName(event.target.value)}
+                placeholder="Nhập họ và tên"
+                required
+                className="h-12 w-full rounded-[20px] border border-teal-200 bg-white px-5 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 md:text-[1.15rem]"
+              />
+            </div>
+            <div>
+              <input
+                id="booking-phone"
+                type="tel"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
+                placeholder="Nhập số điện thoại"
+                required
+                className="h-12 w-full rounded-[20px] border border-teal-200 bg-white px-5 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 md:text-[1.15rem]"
+              />
             </div>
 
             <div>
@@ -178,7 +176,7 @@ export function BookingSection() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="Nhập email"
-                className="h-12 w-full rounded-[14px] border border-teal-200 bg-white px-4 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 sm:px-5 md:text-[1.15rem]"
+                className="h-12 w-full rounded-[20px] border border-teal-200 bg-white px-5 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:h-14 md:text-[1.15rem]"
               />
             </div>
 
@@ -190,7 +188,7 @@ export function BookingSection() {
                   setSelectedBranchId(Number(event.target.value))
                   setNearestDistanceKm(null)
                 }}
-                className="h-12 w-full rounded-[14px] border border-teal-200 bg-white px-4 text-base text-[#111827] outline-none focus:border-[#10bcc0] sm:h-14 sm:px-5 md:text-[1.15rem]"
+                className="h-12 w-full rounded-[20px] border border-teal-200 bg-white px-5 text-base text-[#111827] outline-none focus:border-[#10bcc0] sm:h-14 md:text-[1.15rem]"
               >
                 {branches.map((branch) => (
                   <option key={branch.id} value={branch.id}>
@@ -215,7 +213,7 @@ export function BookingSection() {
                 value={note}
                 onChange={(event) => setNote(event.target.value)}
                 placeholder="Ghi chú thời gian mong muốn hoặc nhu cầu chăm sóc da..."
-                className="w-full rounded-[14px] border border-teal-200 bg-white px-4 py-3 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:px-5 sm:py-4 md:text-[1.15rem]"
+                className="w-full rounded-[20px] border border-teal-200 bg-white px-5 py-3 text-base text-[#111827] outline-none placeholder:text-[#8b96a5] focus:border-[#10bcc0] sm:py-4 md:text-[1.15rem]"
               />
             </div>
 
@@ -224,9 +222,9 @@ export function BookingSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="h-12 w-full rounded-[14px] bg-orange-500 px-4 text-base font-extrabold text-white transition-opacity hover:opacity-90 sm:h-14 sm:px-8 sm:text-lg md:h-16 md:text-[1.65rem]"
+              className="h-12 w-full rounded-[20px] bg-orange-500 px-4 text-base font-extrabold text-white shadow-md transition-opacity hover:opacity-90 sm:h-14 sm:px-8 sm:text-lg md:h-16 md:text-[1.65rem]"
             >
-              {isSubmitting ? "Đang gửi thông tin..." : "Đặt lịch Combo 4"}
+              {isSubmitting ? "Đang gửi thông tin..." : "ĐĂNG KÝ NGAY"}
             </button>
           </form>
         </div>

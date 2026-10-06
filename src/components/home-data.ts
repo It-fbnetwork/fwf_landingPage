@@ -61,7 +61,7 @@ export const caseStudies: CaseStudy[] = [
       "/399/Ultrasonic.png",
       "/399/Cold handle.png",
     ],
-    tags: ["Giá Foxie 769K", "Giá niêm yết 1079K", "50 phút"],
+    tags: ["Giá Foxie 399K", "Giá niêm yết 1079K", "50 phút"],
     detailPoints: [
       "Ultrasonic hỗ trợ thư giãn lỗ chân lông và thúc đẩy dưỡng chất thẩm thấu.",
       "Điện di lạnh giúp khóa ẩm, cân bằng da và se khít lỗ chân lông.",
@@ -100,7 +100,7 @@ export const faqItems = [
   {
     question: "Giá Combo 4 là bao nhiêu?",
     answer:
-      "Giá niêm yết là 1.079.000. Giá thẻ Foxie là 769.000.",
+      "Giá niêm yết là 1.079.000. Giá thẻ Foxie là 399.000.",
   },
   {
     question: "Combo này gồm những công nghệ nổi bật nào?",

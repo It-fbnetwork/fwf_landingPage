@@ -55,7 +55,7 @@ export function WhyChooseSection() {
               Khám phá
             </p>
             <h2 className="text-xl font-bold leading-tight text-[#ff7a00] sm:text-2xl md:text-3xl lg:text-4xl">
-              Vì sao Combo 4 là giải pháp toàn diện <br className="hidden lg:block" /> cho làn da rạng rỡ
+              Vì sao Combo 4 là giải pháp <br className="hidden lg:block" />  toàn diện cho làn da rạng rỡ
             </h2>
           </div>
 
@@ -142,7 +142,7 @@ export function WhyChooseSection() {
 const industries = [
   {
     name: "Giá Foxie tối ưu",
-    description: "Giá thẻ Foxie 769.000 cho liệu trình 50 phút, giá niêm yết 1.079.000.",
+    description: "Giá thẻ Foxie 399.000 cho liệu trình 50 phút, giá niêm yết 1.079.000.",
     layoutClass: "lg:col-start-1 lg:row-start-1",
     icon: HandCoins,
   },
