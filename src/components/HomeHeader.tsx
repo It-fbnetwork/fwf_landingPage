@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 
 const headerLinks = [
   { label: "Liệu Trình", href: "#fox-swat" },
-  { label: "Ưu Đãi", href: "#booking" },
   { label: "FAQ", href: "#faq" },
 ]
 
@@ -72,10 +71,10 @@ export function HomeHeader() {
       className={`fixed top-0 z-50 w-full p-2 transition-all duration-300 motion-reduce:transition-none ${isHeaderHidden && !isMenuOpen ? "-translate-y-full" : "translate-y-0"} ${isScrolled || isMenuOpen ? "border-b border-orange-100 bg-white/95 backdrop-blur-md" : "bg-transparent"}`}
     >
       <div className="mx-auto max-w-[1120px] px-3 sm:px-5 lg:px-6">
-        <div className="flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-[72px] lg:gap-4">
+        <div className="flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-[72px] lg:justify-center lg:gap-4">
           <Link
             href="/"
-            className="flex h-12 w-[86px] shrink-0 items-center sm:h-14 sm:w-[100px]"
+            className="flex h-14 w-[100px] shrink-0 items-center sm:h-16 sm:w-[120px] lg:h-[72px] lg:w-[132px]"
             aria-label="Face Wash Fox"
             onClick={closeMenu}
           >
@@ -88,10 +87,10 @@ export function HomeHeader() {
               priority
             />
           </Link>
-          <nav className="hidden min-w-0 flex-1 items-center justify-between gap-1 rounded-full border-2 border-[#f1d3ba] bg-white/95 p-1 lg:flex">
+          <nav className="hidden shrink-0 items-center gap-1 rounded-full border-2 border-[#f1d3ba] bg-white/95 p-1 lg:flex">
             <Link
               href="https://menu.facewashfox.com/"
-              className="inline-flex h-10 flex-1 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5"
+              className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5"
             >
               Fox Menu
             </Link>
@@ -101,7 +100,7 @@ export function HomeHeader() {
                 href={resolveHref(link.href)}
                 onClick={() => setActiveSection(link.href)}
                 aria-current={activeSection === link.href ? "location" : undefined}
-                className={`inline-flex h-10 flex-1 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5 ${activeSection === link.href ? "bg-[#fff0da] text-[#e97828]" : ""}`}
+                className={`inline-flex h-10 items-center justify-center whitespace-nowrap rounded-full px-4 text-base font-bold text-[#373b43] transition-colors hover:bg-[#fff0da] hover:text-[#e97828] focus-visible:bg-[#fff0da] xl:px-5 ${activeSection === link.href ? "bg-[#fff0da] text-[#e97828]" : ""}`}
               >
                 {link.label}
               </Link>
