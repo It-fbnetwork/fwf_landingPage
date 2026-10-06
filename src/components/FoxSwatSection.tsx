@@ -6,6 +6,8 @@ import Image from "next/image"
 import { serviceSteps } from "@/components/home-data"
 
 export function FoxSwatSection() {
+  const timelineRef = useRef<HTMLDivElement | null>(null)
+  const [timelinePath, setTimelinePath] = useState({ d: "", height: 1 })
   const itemRefs = useRef<Array<HTMLDivElement | null>>([])
   const [visibleItems, setVisibleItems] = useState<Set<number>>(() => new Set())
 
@@ -36,6 +38,37 @@ export function FoxSwatSection() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const timeline = timelineRef.current
+    if (!timeline) return
+
+    const updatePath = () => {
+      const centers = itemRefs.current.flatMap((item) =>
+        item ? [item.offsetTop + item.offsetHeight / 2] : []
+      )
+      if (!centers.length) return
+      let d = `M70 ${centers[0]}`
+      for (let index = 1; index < centers.length; index += 1) {
+        const start = centers[index - 1]
+        const end = centers[index]
+        const middle = (start + end) / 2
+        const bend = index % 2 === 0 ? 34 : 106
+        const control = (end - start) / 4
+        // Vertical tangents at each circle keep the curve centered through it.
+        d += ` C70 ${start + control} ${bend} ${middle - control} ${bend} ${middle}`
+        d += ` C${bend} ${middle + control} 70 ${end - control} 70 ${end}`
+      }
+      setTimelinePath({ d, height: Math.max(1, timeline.offsetHeight) })
+    }
+
+    const observer = new ResizeObserver(updatePath)
+    observer.observe(timeline)
+    itemRefs.current.forEach((item) => {
+      if (item) observer.observe(item)
+    })
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="fox-swat" className="relative z-20 bg-white py-12 sm:py-16 md:py-24">
       <div className="mx-auto w-full max-w-[1320px] px-4 md:px-8 xl:px-10">
@@ -53,7 +86,7 @@ export function FoxSwatSection() {
         </div>
 
         <div className="mx-auto max-w-6xl ">
-          <div className="relative">
+          <div ref={timelineRef} className="relative">
             {/* Mobile timeline line */}
             <div
               aria-hidden="true"
@@ -65,10 +98,10 @@ export function FoxSwatSection() {
               aria-hidden="true"
               className="pointer-events-none absolute left-5 top-0 hidden h-full w-[140px] -translate-x-1/2 md:left-1/2 md:block"
               preserveAspectRatio="none"
-              viewBox="0 0 140 1200"
+              viewBox={`0 0 140 ${timelinePath.height}`}
             >
               <path
-                d="M72 0 C32 125 112 220 72 345 C32 470 108 570 72 690 C36 810 106 910 72 1035 C46 1128 78 1180 72 1200"
+                d={timelinePath.d}
                 fill="none"
                 stroke="rgb(255 128 0)"
                 strokeDasharray="2 12"
@@ -95,11 +128,11 @@ export function FoxSwatSection() {
                     className={`relative grid gap-4 transition-all duration-700 ease-out sm:gap-5 md:grid-cols-[minmax(0,1fr)_96px_minmax(0,1fr)] md:items-center md:gap-6 ${isLeft ? "" : "md:[&_.timeline-copy]:col-start-3"
                       } ${isVisible
                         ? "translate-y-0 opacity-100"
-                        : "translate-y-8 opacity-0 md:translate-y-14"
+                        : "translate-y-8 opacity-0 md:translate-y-0"
                       }`}
                     style={{ transitionDelay: `${Math.min(index % 3, 2) * 90}ms` }}
                   >
-                    <div className={`timeline-copy pl-14 sm:pl-16 md:pl-0 ${isLeft ? "md:text-right" : "md:text-left"}`}>
+                    <div className={`timeline-copy pl-14 sm:pl-16 md:row-start-1 md:pl-0 ${isLeft ? "md:text-right" : "md:text-left"}`}>
                       <p className="font-serif text-4xl italic leading-none text-slate-950 sm:text-5xl md:text-7xl">
                         {stepNumber}
                       </p>
@@ -112,10 +145,9 @@ export function FoxSwatSection() {
                     </div>
 
                     <div
-                      className={`absolute left-5 top-1 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-dotted bg-white text-[11px] font-black shadow-[0_16px_35px_-24px_rgba(14,165,233,0.7)] transition-all duration-700 sm:h-12 sm:w-12 sm:text-sm md:static md:col-start-2 md:mx-auto md:translate-x-0 ${isVisible ? "scale-100 border-orange-300 text-orange-500" : "scale-90 border-orange-100 text-orange-300"
+                      className={`absolute left-5 top-1 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-dotted bg-white text-[11px] font-black shadow-[0_16px_35px_-24px_rgba(14,165,233,0.7)] transition-all duration-700 sm:h-12 sm:w-12 sm:text-sm md:static md:col-start-2 md:row-start-1 md:justify-self-center md:translate-x-0 ${isVisible ? "scale-100 border-orange-300 text-orange-500" : "scale-90 border-orange-100 text-orange-300"
                         }`}
                     >
-                      {item.time}
                     </div>
 
                     <div className={`${isLeft ? "md:col-start-3" : "md:col-start-1 md:row-start-1"} pl-14 sm:pl-16 md:pl-0`}>
