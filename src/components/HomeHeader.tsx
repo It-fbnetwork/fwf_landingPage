@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { SectionLink as Link } from "@/components/SectionLink"
 import { usePathname } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
@@ -24,6 +24,14 @@ export function HomeHeader() {
     if (!href.startsWith("#")) return href
     return isHomePage ? href : `/${href}`
   }
+
+  useEffect(() => {
+    if (!window.location.hash) return
+    const target = document.getElementById(window.location.hash.slice(1))
+    if (!target) return
+    target.scrollIntoView()
+    window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search)
+  }, [pathname])
 
   useEffect(() => {
     const handleScroll = () => {

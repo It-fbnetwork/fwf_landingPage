@@ -1,6 +1,6 @@
 import { ArrowRight, ChevronDown, ChevronUp, Phone } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { SectionLink as Link } from "@/components/SectionLink"
 
 import { BookingSection } from "@/components/BookingSection"
 import { FaqSection } from "@/components/FaqSection"
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div id="top">
       <HomeHeader />
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,140,0,0.25),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(18,188,190,0.28),transparent_34%),linear-gradient(180deg,#ffcf00_0%,#fff8de_48%,#ffffff_100%)] md:min-h-screen">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(210,238,230,0.45),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(190,229,232,0.22),transparent_38%),linear-gradient(180deg,#e8f5f0_0%,#f3faf7_48%,#ffffff_100%)] md:min-h-screen">
         <div className="container relative z-10 mx-auto px-4 pb-12 pt-20 sm:pb-16 sm:pt-24 md:pt-32">
           <div className="mx-auto mb-8 max-w-4xl text-center sm:mb-12 md:mb-16">
             <p className="mx-auto mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-orange-200 bg-white/95 px-3.5 py-2.5 text-[10px] font-bold text-orange-500 shadow-[0_20px_40px_-28px_rgba(255,128,0,0.48)] backdrop-blur-sm sm:mb-6 sm:gap-3 sm:px-6 sm:py-3 sm:text-sm md:px-8 md:py-4 md:text-base">
