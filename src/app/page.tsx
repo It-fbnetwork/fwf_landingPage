@@ -26,7 +26,7 @@ export default function Home() {
               Lumiglow + Gymming + Eye-Revive
             </h1>
             <p className="mx-auto max-w-3xl text-sm font-semibold leading-7 text-stone-700 sm:text-base sm:leading-8 md:text-[20px]">
-              Giải pháp toàn diện cho làn da rạng rỡ trong <span className="font-black text-[#10bcc0]">50 phút</span>. <br></br> Giá niêm yết <span className="font-black text-stone-500">1079K</span>, giá thẻ Foxie <span className="font-black text-orange-500">769K</span>.
+              Giải pháp toàn diện cho làn da rạng rỡ trong <span className="font-black text-[#10bcc0]">50 phút</span>. <br></br> Giá niêm yết <span className="font-black text-stone-500">1079K</span>, giá trải nghiệm lần đầu <span className="font-black text-orange-500">399k</span> (Chưa bao gồm VAT)
             </p>
             
           </div>
@@ -55,8 +55,9 @@ export default function Home() {
               <p className="mt-1 text-xl font-black text-[#10bcc0] sm:mt-2 sm:text-3xl">50p</p>
             </div>
             <div className="rounded-[14px] border border-teal-100 bg-white/92 p-2.5 text-center shadow-[0_18px_45px_-34px_rgba(8,174,181,0.35)] sm:rounded-[20px] sm:p-4">
-              <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#10bcc0] sm:text-xs sm:tracking-[0.16em]">Giá Foxie</p>
-              <p className="mt-1 text-xl font-black text-orange-500 sm:mt-2 sm:text-3xl">769K</p>
+              <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#10bcc0] sm:text-xs sm:tracking-[0.16em]">Giá trải nghiệm lần đầu</p>
+              <p className="mt-1 text-xl font-black text-orange-500 sm:mt-2 sm:text-3xl">399k</p>
+              <p className="mt-1 text-[9px] text-stone-500 sm:text-xs">(Chưa bao gồm VAT)</p>
             </div>
             <div className="rounded-[14px] border border-teal-100 bg-white/92 p-2.5 text-center shadow-[0_18px_45px_-34px_rgba(8,174,181,0.35)] sm:rounded-[20px] sm:p-4">
               <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#10bcc0] sm:text-xs sm:tracking-[0.16em]">Số bước</p>
