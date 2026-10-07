@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react"
 import { BadgeCheck, X } from "lucide-react"
 
+const randomDelay = (min: number, max: number) =>
+  Math.floor(min + Math.random() * (max - min + 1))
+
 // Sample names only; these notifications do not represent real bookings.
 const sampleNames = [
   "Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Huỳnh", "Phan", "Vũ", "Võ", "Đặng",
@@ -23,16 +26,16 @@ export function RegistrationToast() {
     const showNext = () => {
       if (document.hidden || document.querySelector('[role="dialog"]') || document.activeElement?.closest("form")) {
         setNotifications([])
-        timer = setTimeout(showNext, 1000)
+        timer = setTimeout(showNext, randomDelay(8000, 22000))
         return
       }
       const notification = { id: index, name: sampleNames[index % sampleNames.length] }
       setNotifications((current) => [...current, notification].slice(-3))
       index += 1
-      timer = setTimeout(showNext, 1000)
+      timer = setTimeout(showNext, randomDelay(8000, 22000))
     }
 
-    timer = setTimeout(showNext, 1000)
+    timer = setTimeout(showNext, randomDelay(5000, 10000))
     return () => clearTimeout(timer)
   }, [dismissed])
 
