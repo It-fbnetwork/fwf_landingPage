@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto mb-8 max-w-[280px] sm:mb-10 sm:max-w-[320px] md:mb-12 md:max-w-[360px]">
-            <div className="rounded-[28px] bg-[linear-gradient(180deg,#16c9c9_0%,#08aeb5_100%)] p-2.5 shadow-[0_28px_70px_-30px_rgba(8,174,181,0.8)] sm:rounded-[38px] sm:p-4 md:rounded-[42px] md:p-5">
+            <div className="p-2.5 sm:p-4 md:p-5">
               <div className="rounded-[22px] bg-white p-1.5 sm:rounded-[30px] sm:p-2 md:rounded-[34px] md:p-3">
                 <div className="relative aspect-[9/16] w-full overflow-hidden rounded-[18px] bg-[#e9fbfb] sm:rounded-[24px] md:rounded-[28px]">
                   <video
