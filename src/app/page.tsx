@@ -107,12 +107,7 @@ export default function Home() {
               >
                 ĐẶT LỊCH NGAY
               </Link>
-              <Link
-                href="https://cuahang.facewashfox.com/"
-                className="inline-flex w-full items-center justify-center rounded-full bg-[#10bcc0] px-5 py-3 text-center text-sm font-extrabold uppercase tracking-[0.08em] text-white shadow-[0_22px_45px_-24px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#08aeb5] sm:min-w-[240px] sm:w-auto sm:px-6 sm:text-base"
-              >
-                12 CHI NHÁNH ÁP DỤNG
-              </Link>
+              
             </div>
           </div>
 
